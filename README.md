@@ -1,9 +1,9 @@
 # Html-Chat-Sdk
 
 ### What is the BoldChat HTML Chat Window SDK?
-The BoldChat HTML SDK allows businesses to create and host a fully customized chat window. The Chat Window SDK is a a collection of html, javascript and css files that communicate with BoldChat's API. These files allow you to create a completely customized chat user interface that facilitates communication between the visitor and operator. 
+The BoldChat HTML SDK allows businesses to create and host a fully customized chat window. The Chat Window SDK is a collection of html, javascript and css files that communicate with BoldChat's API. These files allow you to create a completely customized chat user interface that facilitates communication between the visitor and operator. 
 
-### Below are some examples of the various themes currently available:
+### Below are some examples of themes currently available:
 
 > ####Nightshade####
 ![nightshadelayout](http://logmein-boldchat.github.io/Html-Chat-Sdk/NightshadeLayout.jpg)
@@ -22,7 +22,7 @@ The BoldChat HTML SDK allows businesses to create and host a fully customized ch
 ## Getting Started:
 1) Clone or download this repository and add it to your web site.
 
-2) Generate an API key from the BoldChat client setup.  For more information see [BoldChat Help](http://help.boldchat.com/help/current/BoldChat/c_bc_sdk_android_get_sdk.html)
+2) Generate an API key from the BoldChat client setup.  For more information see [BoldChat Help docs](http://help.boldchat.com/help/current/BoldChat/c_bc_sdk_android_get_sdk.html).
 
 3) Modify the scripts/bc-config.js file in the HTML SDK.  Change the sessionApiKey to be the API key you generated in the BoldChat client.
 
@@ -33,21 +33,21 @@ The BoldChat HTML SDK allows businesses to create and host a fully customized ch
 <script type="text/javascript" src="scripts/bc-sdk-start.js"></script>
 ```
 
-5) If you do not already have a BoldChat button on your page you will need to generate and add the html snippet to add the button. For detailed instructions on chat button setup please see [BoldChat Help docs](http://help.boldchat.com/help/current/BoldChat/c_bc_setupguide_header.html).
+5) If you do not already have a BoldChat button, you will need to generate and add the html snippet in order to add a button to your page. For detailed instructions on chat button setup please see [BoldChat Help docs](http://help.boldchat.com/help/current/BoldChat/c_bc_setupguide_header.html).
 
-6) When the BoldChat button or invitation is clicked the HTML SDK will be launched instead of the default BoldChat window.
+6) When the BoldChat button or invitation is clicked, the HTML SDK will be launched instead of the default BoldChat window.
 
 
 ## Changing Themes:
 
-To change the theme your chat window is using modify scripts/bc-config.js.  The themes variable is defined as the chatWindowUrl variable. Change this value to the theme path of your choice, for instance "themes/hubris".
+To change the theme of the chat window, you will modify scripts/bc-config.js.  The themes variable is defined as the chatWindowUrl variable. Change this value to the theme path of your choice, for instance "themes/hubris".
 
 
 ## What does this repository contain?
 
 This repository contains BoldChat's SDK which is a collection of html, javascript and css files. 
 These javascript files serve to communicate with BoldChat's API to facilitate chat interactions between operator and visitor.
-The repository contains a zip file which contains two versions of each theme included. One version is the non-minified and non-compressed version of the sdk. These html files reference raw javascript and css files. The second version is the production ready, minified and compressed versions of the files. Whereas these html files are both minified as well as referencing the compressed, minified and consolidated versions of the javascript and css files.
+The repository is comprised of a zip file which contains two versions of each theme. One version is the non-minified and non-compressed version of the sdk. These html files reference raw javascript and css files. The second version is the production-ready, minified and compressed versions of the files. These html files are both minified. In addition, the files reference the compressed, minified and consolidated versions of the javascript and css files.
 
 ## Supported browsers/platforms:
 
@@ -61,8 +61,8 @@ The repository contains a zip file which contains two versions of each theme inc
 
 These files are built using [NPM](https://nodejs.org/) & [Gulp](http://gulpjs.com/). You'll want to install NodeJs as well as gulp. 
 
-When you first download the zip, you'll notice a gulpfile.js, gulpfile.config.js and a package.json. These will be your starting off point to build the files.
-In the package.json file, there is a scripts object with various options. However, initially you'll want to run the following to download everything necessary for your project:
+When you first download the zip, you'll notice a gulpfile.js, gulpfile.config.js and a package.json. These will be your starting off points to build the files.
+In the package.json file, there is a scripts object with various options. Initially, you'll want to run the following to download everything necessary for your project:
 ```javascript
 npm run build
 ```
@@ -101,9 +101,9 @@ npm install && gulp
 
 ## Additional Info:
 
-#### Technically Speaking..
+#### Technically Speaking...
 
- - There is a bc-config.js file which sets all the configuration related information. However, it is also possible to override these settings on each of your pages. For instance, you may desire a completely different apikey/theme/layered vs popup on different pages. This is easily accomplished:
+ - There is a bc-config.js file which sets all the configuration-related information. It is possible to override these settings on each of your pages. For instance, you may desire a completely different apikey/theme/layered vs popup on different pages. This is easily accomplished:
 ```javascript
 <script type="text/javascript">
 	window._bcChatWindowUrl = 'themes/{theme name here}';
@@ -111,8 +111,8 @@ npm install && gulp
 	window._bcForcePopup = false; 
 </script>
 ```
-Simply add the above code for each page that you want to be different from the bc-config options.
-Alternatively, you could have a different bc-config for each page as well. There are many ways to accomplish this.
+Simply add the above code for each page you want different from the bc-config options.
+Alternatively, you could have a different bc-config for each page. There are many ways in which this can be accomplished.
 * *One note, you should place the above code before your bc-config.js file.*
 
 ##### Layered vs Popup 
